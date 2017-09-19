@@ -2,6 +2,7 @@
 #define ROTATION_H
 
 #include <iostream>
+#include <math.h>
 #include <vector>
 
 
@@ -11,13 +12,19 @@ class Rotation
 {
 public:
     Rotation();
-    void myRot(vector<vector<float>>A,vector<vector<float>>B);
+    vector<vector<float>> initialize();
+    vector<vector<float>> myRot(vector<float>rotation);
+    void eularAngles(vector<float>rot);
 
+
+    void printRotation();
     ~Rotation();
 
 private:
+    vector<vector<float>> tmp = {{0,0,0},{0,0,0},{0,0,0}};
+    vector<vector<float>> A = {{0,0,0},{0,0,0},{0,0,0}};
 
-    vector<vector<float> >myVec;
+
 
 };
 
