@@ -14,7 +14,7 @@ public:
     void printMatrix();
     void printEulerAngles();
 private:
-    vector<vector<double>> rotationMatrix = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+    vector<vector<double> > rotationMatrix = { {0, 0, 0}, {0, 0, 0}, {0, 0, 0} };
     double yy;
 };
 
