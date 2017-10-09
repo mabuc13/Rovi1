@@ -5,7 +5,7 @@ CONFIG -= qt
 INCLUDEPATH += /usr/local/include/opencv2
 LIBS += -L/usr/local/lib -lopencv_core -lopencv_imgcodecs -lopencv_highgui
 LIBS += `pkg-config opencv --libs`
-SOURCES += main.cpp \
+SOURCES += picture2.cpp \
     visionmethods.cpp
 
 HEADERS += \
