@@ -1,3 +1,0 @@
-/mnt/hgfs/7. Semester/RoVi/Lecture_1_Introduction/Box/build/CMakeFiles/edit_cache.dir
-/mnt/hgfs/7. Semester/RoVi/Lecture_1_Introduction/Box/build/CMakeFiles/rebuild_cache.dir
-/mnt/hgfs/7. Semester/RoVi/Lecture_1_Introduction/Box/build/CMakeFiles/blackBox.dir
