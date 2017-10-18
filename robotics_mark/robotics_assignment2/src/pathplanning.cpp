@@ -3,6 +3,15 @@
 #include <rwlibs/pathplanners/rrt/RRTPlanner.hpp>
 #include <rwlibs/pathplanners/rrt/RRTQToQPlanner.hpp>
 #include <rwlibs/proximitystrategies/ProximityStrategyFactory.hpp>
+
+//#include <rw/models/WorkCell.hpp>
+//#include <rw/models/Device.hpp>
+//#include <rw/kinematics/Frame.hpp>
+//#include <boost/foreach.hpp>
+#include <rw/kinematics/MovableFrame.hpp>
+#include <rw/kinematics/FKRange.hpp>
+#include <rw/math/Transform3D.hpp>
+
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -17,6 +26,10 @@ using namespace rw::proximity;
 using namespace rw::trajectory;
 using namespace rwlibs::pathplanners;
 using namespace rwlibs::proximitystrategies;
+
+//using namespace rw::math::Transform3D;
+//using namespace rw::models::WorkCell;
+using rw::math::Transform3D;
 
 #define MAXTIME 10.
 
@@ -80,9 +93,47 @@ void closeOfstream(ofstream &myOfStream)
     myOfStream.close();
 }
 
+void gripMovableFrame(
+    MovableFrame& item, Frame& gripper, State& state)
+{
+    FKRange fk(&gripper, &item, state);
+    const Transform3D<> transform = fk.get(state);
+    item.setTransform(transform, state);
+    item.attachTo(&gripper, state);
+}
+/*
+void printKinematicTree(
+    Frame& frame,
+    const State& state,
+    const Transform3D<>& parentTransform,
+    int level)
+{
+    const Transform3D<> transform = parentTransform * frame.getTransform(state);
+    std::cout
+        << std::string(level, ' ')
+        << frame.getName()
+        << " at "
+        << transform.P()
+        << "\n";
+    BOOST_FOREACH(Frame& child, frame.getChildren(state)) {
+        printKinematicTree(child, state, transform, level + 1);
+    }
+}
+
+
+void printDefaultWorkCellStructure(const WorkCell& workcell)
+{
+    std::cout << workcell << "\n";
+    printKinematicTree(
+        *workcell.getWorldFrame(),
+        workcell.getDefaultState(),
+        Transform3D<>::identity(),
+        0);
+}
+*/
 
 int main(int argc, char** argv) {
-        rw::math::Math::seed();
+        rw::math::Math::seed(); //Marks edit
         const string wcFile = "/home/student/workspace/robotics_assignment2/workcell/Kr16WallWorkCell/Scene.wc.xml"; //Edited this to my filepath
 	const string deviceName = "KukaKr16";
 	cout << "Trying to use workcell " << wcFile << " and device " << deviceName << endl;
@@ -107,23 +158,13 @@ int main(int argc, char** argv) {
 	/** More complex way: allows more detailed definition of parameters and methods */
 	QSampler::Ptr sampler = QSampler::makeConstrained(QSampler::makeUniform(device),constraint.getQConstraintPtr());
 	QMetric::Ptr metric = MetricFactory::makeEuclidean<Q>();
-	double extend = 0.1;
+        double extend = 0.5;
 	QToQPlanner::Ptr planner = RRTPlanner::makeQToQPlanner(constraint, sampler, metric, extend, RRTPlanner::RRTConnect);
-
-        //Q from(6,-0.2,-0.6,1.5,0.0,0.6,1.2); Original line from pathplanner.cpp!!! I think there may be a collision in this frame tho
+//First we move the robot arm from the starting position to right above the bottle positon
         Q from(6,0, 0, 0, 0, 0, 0); // Starting position!
-                                                                /*
-                                                                 * q_pick = (-3.142,-0.827,-3.002,-3.143,0.099,-1.573) [rad]
-•
-                                                                  q_place = (1.571,0.006,0.030,0.153,0.762,4.490) [rad]
-                                                                 *  */
-	//Q to(6,1.7,0.6,-0.8,0.3,0.7,-0.5); // Very difficult for planner
-
 
         ofstream myOfStream;
-        initLuaStream("test.txt", myOfStream);
-
-
+        initLuaStream("take1.txt", myOfStream);
 
         Q to(6,-3.142,-0.827,-3.002,-3.143,0.099,-1.5736); //Bottle position
 
@@ -144,7 +185,7 @@ int main(int argc, char** argv) {
 	}
 
         string tmpString;
-        stringstream oneState;
+
 	for (QPath::iterator it = path.begin(); it < path.end(); it++) {
            //tmpString = (*it);
             //tmpString.erase(tmpString.begin(),tmpString.begin()+4);
@@ -156,6 +197,62 @@ int main(int argc, char** argv) {
            tmpString.erase(tmpString.begin(), tmpString.begin()+4);
            myOfStream << "setQ(" << tmpString << ")" << endl;
 	}
+/*************************************************************************************************************
+                                                        PATH 2
+*************************************************************************************************************/
+//Next we attach the bottle to the gripper, before moving it to the bottles end position
+//Lets see if we cant print the frame state of the workcell
+
+        myOfStream << "attach(bottle,gripper)" << endl;
+
+
+
+//Next we move the bottle to the desired end position
+        Q from2(6, -3.142,-0.827,-3.002,-3.143,0.099,-1.574); //Rounded up here
+        Q to2(6, 1.571,0.006,0.030,0.153,0.762,4.490);
+
+        State state2 = wc->getDefaultState();
+        device->setQ(from2, state2);
+
+        MovableFrame *bottle =dynamic_cast<MovableFrame*>(wc->findFrame("Bottle"));
+        Frame *tool = wc->findFrame("Tool");
+       rw::kinematics::Kinematics::gripFrame(bottle, tool, state2);
+
+       CollisionDetector detector2(wc, ProximityStrategyFactory::makeDefaultCollisionStrategy());
+       PlannerConstraint constraint2 = PlannerConstraint::make(&detector2,device,state2);
+       QToQPlanner::Ptr planner2 = RRTPlanner::makeQToQPlanner(constraint2, sampler, metric, extend, RRTPlanner::RRTConnect);
+
+        if (!checkCollisions(device, state2, detector2, from2))
+                return 0;
+        if (!checkCollisions(device, state2, detector2, to2))
+                return 0;
+
+        cout << "Planning from " << from2 << " to " << to2 << endl;
+        QPath path2;
+        Timer t2;
+        t2.resetAndResume();
+        planner2->query(from2,to2,path2,MAXTIME);
+        t2.pause();
+        cout << "Path of length " << path2.size() << " found in " << t2.getTime() << " seconds." << endl;
+        if (t2.getTime() >= MAXTIME) {
+                cout << "Notice: max time of " << MAXTIME << " seconds reached." << endl;
+        }
+
+        string tmpString2;
+
+        for (QPath::iterator it2 = path2.begin(); it2 < path2.end(); it2++) {
+           //tmpString = (*it);
+            //tmpString.erase(tmpString.begin(),tmpString.begin()+4);
+            //cout << tmpString << endl;
+            stringstream oneState2;
+           oneState2 << *it2;
+           tmpString2 = oneState2.str();
+
+           tmpString2.erase(tmpString2.begin(), tmpString2.begin()+4);
+           myOfStream << "setQ(" << tmpString2 << ")" << endl;
+        }
+//Finally we attach the bottle to the table
+        myOfStream << "attach(bottle,table)" << endl;
         closeOfstream(myOfStream);
 	cout << "Program done." << endl;
 	return 0;

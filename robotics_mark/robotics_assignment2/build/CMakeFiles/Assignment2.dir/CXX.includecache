@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/student/Desktop/workspace/robotics_assignment2/src/pathplanning.cpp
-iostream
--
-rw/rw.hpp
--
-rwlibs/pathplanners/rrt/RRTPlanner.hpp
--
-rwlibs/pathplanners/rrt/RRTQToQPlanner.hpp
--
-rwlibs/proximitystrategies/ProximityStrategyFactory.hpp
--
-string
--
-fstream
--
-sstream
--
-
 /home/student/RobWork/RobWork/cmake/../ext/boostbindings/boost/numeric/bindings/lapack/geev.hpp
 boost/numeric/bindings/traits/traits.hpp
 -
@@ -3160,6 +3142,10 @@ rw/kinematics/Frame.hpp
 vector
 -
 
+/home/student/RobWork/RobWork/cmake/../src/rw/kinematics/MovableFrame.hpp
+Frame.hpp
+/home/student/RobWork/RobWork/cmake/../src/rw/kinematics/Frame.hpp
+
 /home/student/RobWork/RobWork/cmake/../src/rw/kinematics/State.hpp
 vector
 -
@@ -3173,6 +3159,14 @@ rw/common/Ptr.hpp
 -
 rw/common/Serializable.hpp
 -
+
+/home/student/RobWork/RobWork/cmake/../src/rw/kinematics/StateData.hpp
+string
+-
+State.hpp
+/home/student/RobWork/RobWork/cmake/../src/rw/kinematics/State.hpp
+StateCache.hpp
+/home/student/RobWork/RobWork/cmake/../src/rw/kinematics/StateCache.hpp
 
 /home/student/RobWork/RobWork/cmake/../src/rw/kinematics/StateStructure.hpp
 State.hpp
@@ -3543,6 +3537,10 @@ Eigen/Eigen
 -
 limits
 -
+
+/home/student/RobWork/RobWork/cmake/../src/rw/math/Rotation3DVector.hpp
+Rotation3D.hpp
+/home/student/RobWork/RobWork/cmake/../src/rw/math/Rotation3D.hpp
 
 /home/student/RobWork/RobWork/cmake/../src/rw/math/Transform2D.hpp
 Vector2D.hpp
@@ -4076,6 +4074,30 @@ rw/proximity/CollisionStrategy.hpp
 rw/proximity/CollisionToleranceStrategy.hpp
 -
 rw/proximity/DistanceStrategy.hpp
+-
+
+/home/student/workspace/robotics_assignment2/src/pathplanning.cpp
+iostream
+-
+rw/rw.hpp
+-
+rwlibs/pathplanners/rrt/RRTPlanner.hpp
+-
+rwlibs/pathplanners/rrt/RRTQToQPlanner.hpp
+-
+rwlibs/proximitystrategies/ProximityStrategyFactory.hpp
+-
+rw/kinematics/MovableFrame.hpp
+-
+rw/kinematics/FKRange.hpp
+-
+rw/math/Transform3D.hpp
+-
+string
+-
+fstream
+-
+sstream
 -
 
 /usr/local/include/eigen3/Eigen/Cholesky
