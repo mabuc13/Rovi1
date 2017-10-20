@@ -16,7 +16,6 @@ VisionMethods::VisionMethods(std::string pathToImage)
     imageDescription.push_back("Image 1. Original image in greyscale");
     cout << "Stored greyscale version of image at 1" << endl;
     imgCounter = 1;
-    butterUp(greyImg);
 }
 
 VisionMethods::~VisionMethods()
@@ -171,141 +170,6 @@ void VisionMethods::dftFunc(int whichImage){
 
 }
 
-void VisionMethods::butterWorth(int imgIndex,int order, int circleRadius, bool filterType){
-
-
-    cv::Mat tmp = imageVersions[imgIndex].clone();
-    cv::Mat filtered = imageVersions[imgIndex].clone();
-    //cv::Mat tmp (400,400,CV_8UC1,cv::Scalar(0) );
-    cout << "tmp.rows" << tmp.rows << "tmp.cols" << tmp.cols << endl;
-    cv::Mat filter(tmp.rows,tmp.cols,CV_8UC1,cv::Scalar(0));
-
-    int n = order;                  // The order of filter / "slope of change"
-    int D_zero = circleRadius;      //Radius for were the filter should be applied
-    float D = 0;                    //Initialze D distance number
-    float tmpVar= 0;                //Redundant variable used for math
-
-    /*
-     * The double for loops iterate over the whole image
-     * */
-    double filteredVal;
-    int inputVal;
-    int width = tmp.rows;
-    int height = tmp.cols;
-    if(filterType == 0){
-    for(int i = 0 ; i < width ; i++){
-        for(int j = 0 ; j< height; j++){
-            D = sqrt(  pow( i - (tmp.rows/2) , 2 )+pow( j - (tmp.cols/2) ,2 ) ); //eq 4.8-2 from Digital proccesing book
-            //varTmp = 1 / pow((D_zero/D),2*n) ;
-            tmpVar = 1 / pow((D/D_zero),2*n) ;          //Filter variable
-
-            /*
-             * This if catches any variables higher then allowed for 8-bit image
-             * */
-            if(tmpVar > 1){
-                tmpVar = 1;
-            }
-            //inputVal = tmp.at<uchar>(i, j);
-            //filteredVal = tmpVar*inputVal;
-            //filteredVal = (int)filteredVal;
-            //cout << "Input val: " << inputVal << " FilteredVal: " << filteredVal << " tmpVar: " << tmpVar << endl;
-            //filtered.at<uchar>(i, j) = filteredVal;
-
-
-            //filter.at<uchar>(i,j)=    int(varTmp);
-            //filter.at<uchar>(i,j) = (tmpVar);
-            //filtered.at<uchar>(i,j) = (int)tmp.at<uchar>(i,j)*tmpVar;
-            //filtered.at<uchar>(i,j) = (int)filtered.at<uchar>(i,j);
-          //  cout << tmpVar << endl;
-            //std::cout<< (int)varTmp<<"  ";
-            //std::cout<<D<<"  ";
-        }
-      //  std::cout<<std::endl;
-        }
-    cv::Mat toMerge[] {filter, filter};
-    merge(toMerge, 2, tmp);
-
-
-    //Just trying some stuff out!!
-//    int widthTest = filtered.rows;
-//    int heightTest = filtered.cols;
-
-//    for(int x = 0; x<widthTest; x++)
-//        for(int y = 0; y<heightTest*4; y++)
-//        {
-//           // filtered.at<uchar>(x, y) = 0;
-//        }
-
-
-    //filtered = applyFilter(tmp,filter);
-    // Used soley for debugging purposes
-
-    //Applying the filter on the input image
-    //cv::Mat filtered = tmp.mul(filter);
-
-//    cv::namedWindow("butterworth filter",cv::WINDOW_NORMAL);
-//    cv::imshow("butterworth filter",filter);
-//    cv::waitKey(0);
-
-    cv::namedWindow("butterworth filter",cv::WINDOW_NORMAL);
-    cv::imshow("butterworth filter",tmp);
-    cv::waitKey(0);
-
-    }
-    else if (filterType == 1){
-      for(int i = 0 ; i < tmp.rows ; i++){
-        for(int j = 0 ; j<tmp.cols; j++){
-            D = sqrt(  pow( i - (tmp.rows/2) , 2 )+pow( j - (tmp.cols/2) ,2 ) ); //eq 4.8-2 from Digital proccesing book
-
-            tmpVar = 1 / 1 / pow((D_zero/D),2*n) ;          //Filter variable
-            /*
-             * This if catches any variables higher then allowed for 8-bit image
-             * */
-            if(tmpVar > 255){
-                tmpVar = 255;
-            }
-            //filter.at<uchar>(i,j)=    int(varTmp);
-            filter.at<uchar>(i,j) = (int)(tmpVar);
-            //std::cout<< (int)varTmp<<"  ";
-            //std::cout<<D<<"  ";
-        }
-      //  std::cout<<std::endl;
-        }
-    /*
-     * Used soley for debugging purposes
-    cv::namedWindow("butterworth filter",cv::WINDOW_NORMAL);
-    cv::imshow("butterworth filter",filter);
-    cv::waitKey(0);
-    */
-      }
-    else{
-        std::cout<<"Something went wrong with the choosing of high/low pass choosing"<<std::endl;
-    }
-}
-
-void VisionMethods::butterWorth2(int whichImage, int distance, bool high, int order)
-{
-
-}
-cv::Mat VisionMethods::applyFilter(cv::Mat originalImage, cv::Mat filter){
-    cv::Mat Merged;         //Returned merged image
-//    int tmp= 0;             //tmp variable for catching numbers above 255
-//    for(int i = 1; i<originalImage.rows-1; i++){
-//        for(int j = 1 ; j<originalImage.cols-1; j++){
-//            tmp = originalImage.at<uchar>(i,j) * filter.at<uchar>(i,j);
-//            if(tmp > 255){
-//                tmp = 255;
-//            }
-//            std::cout<<tmp<<"  ";
-////            Merged.at<uchar>(i,j)=tmp;
-//        }
-//        std::cout<<std::endl;
-//    }
-    Merged = originalImage.mul(filter);
-    return Merged;
-}
-
-
 void VisionMethods::histogramOfRegion(int whichImage, int topLeftX, int topLeftY, int width, int height)
 {
     int histSize = 256; //Number of bins in the histogram
@@ -377,16 +241,6 @@ void VisionMethods::histogramOfRegion(int whichImage, int topLeftX, int topLeftY
 
 
 }
-
-
-
-//void VisionMethods::addBorder(int bWidth, int whichImage)
-//{
-    //cv::Mat* source = &imageVersions[1];
-    //cv::Mat destination;
-    //if( !(!(i <100 || i>220) && !(j<350 || j>440)) )
-    
-//}
 
 void VisionMethods::medianFilter(int whichImage, int maskSize) //Mask size is the length of the mask
 //This method is an order statistical filter, the method is to sort all the values in the mask, and choose the median as the value for the pixel in the middle
@@ -559,7 +413,7 @@ void VisionMethods::maxFilter(int whichImage, int maskSize)
     imageDescription.push_back(description);
     cout << description << endl;
 }
-//****************EXPERIMENTAL BUTTERWORTH***********************************'
+
 
 void VisionMethods::shiftDFT(Mat& fImage )
 {
@@ -639,9 +493,9 @@ void VisionMethods::create_butterworth_lowpass_filter(Mat &dft_Filter, int D, in
     merge(toMerge, 2, dft_Filter);
 }
 
-void VisionMethods::butterUp(Mat image)
+void VisionMethods::butterUp(int whichImage, int radiu, int orde)
 {
-
+    Mat image = imageVersions[whichImage].clone();
     Mat img, imgGray, imgOutput;	// image object(s)
 
     Mat padded;		// fourier image objects and arrays
@@ -650,170 +504,80 @@ void VisionMethods::butterUp(Mat image)
 
     int N, M; // fourier image sizes
 
-    int radius = 75;				// low pass filter parameter
-    int order = 2;				// low pass filter parameter
+    int radius = radiu;				// low pass filter parameter
+    int order = orde;				// low pass filter parameter
 
     const string originalName = "Input Image (grayscale)"; // window name
     const string spectrumMagName = "Magnitude Image (log transformed)"; // window name
-    const string lowPassName = "Butterworth Low Pass Filtered (grayscale)"; // window name
+    const string lowPassName = "Butterworth Low Pass Filtered"; // window name
     const string filterName = "Filter Image"; // window nam
 
-//    bool keepProcessing = true;	// loop control flag
-//    int  key;						// user input
-//    int  EVENT_LOOP_DELAY = 40;	// delay for GUI window
-//                                  // 40 ms equates to 1000ms/25fps = 40ms per frame
+    img = image.clone();
+    // setup the DFT image sizes
 
-//    // if command line arguments are provided try to read image/video_name
-//    // otherwise default to capture from attached H/W camera
+    M = getOptimalDFTSize( img.rows );
+    N = getOptimalDFTSize( img.cols );
 
-//      if(
-//        ( argc == 2 && (!(img = imread( argv[1], CV_LOAD_IMAGE_COLOR)).empty()))||
-//        ( argc == 2 && (cap.open(argv[1]) == true )) ||
-//        ( argc != 2 && (cap.open(CAMERA_INDEX) == true))
-//        )
-//      {
-//        // create window object (use flag=0 to allow resize, 1 to auto fix size)
+    imgGray = img.clone();
+    // setup the DFT images
 
-//        namedWindow(originalName, 0);
-//        namedWindow(spectrumMagName, 0);
-//        namedWindow(lowPassName, 0);
-//        namedWindow(filterName, 0);
+    copyMakeBorder(imgGray, padded, 0, M - imgGray.rows, 0,
+                   N - imgGray.cols, BORDER_CONSTANT, Scalar::all(0));
+    planes[0] = Mat_<float>(padded);
+    planes[1] = Mat::zeros(padded.size(), CV_32F);
 
-//          // if capture object in use (i.e. video/camera)
-//          // get image from capture object
+    merge(planes, 2, complexImg);
 
-//            if (cap.isOpened()) {
+    // do the DFT
 
-//                cap >> img;
-//                if(img.empty()){
-//                  if (argc == 2){
-//                      std::cerr << "End of video file reached" << std::endl;
-//                  } else {
-//                      std::cerr << "ERROR: cannot get next fram from camera"
-//                                << std::endl;
-//                  }
-//                  exit(0);
-//                }
+    dft(complexImg, complexImg);
 
-//             }
-        img = image.clone();
-        // setup the DFT image sizes
+    // construct the filter (same size as complex image)
 
-        M = getOptimalDFTSize( img.rows );
-        N = getOptimalDFTSize( img.cols );
+    filter = complexImg.clone();
+    create_butterworth_lowpass_filter(filter, radius, order);
 
-        // add adjustable trackbar for low pass filter threshold parameter
+    // apply filter
+    shiftDFT(complexImg);
+    mulSpectrums(complexImg, filter, complexImg, 0);
+    shiftDFT(complexImg);
 
-        //createTrackbar("Radius", lowPassName, &radius, (min(M, N) / 2));
-       // createTrackbar("Order", lowPassName, &order, 10);
+    // create magnitude spectrum for display
 
-        // start main loop
+    mag = create_spectrum_magnitude_display(complexImg, true);
 
-//        while (keepProcessing) {
+    // do inverse DFT on filtered image
 
-//            // if capture object in use (i.e. video/camera)
-//            // get image from capture object
+    idft(complexImg, complexImg);
 
-//            if (cap.isOpened()) {
+    // split into planes and extract plane 0 as output image
 
-//                cap >> img;
-//                if(img.empty()){
-//                  if (argc == 2){
-//                      std::cerr << "End of video file reached" << std::endl;
-//                  } else {
-//                      std::cerr << "ERROR: cannot get next fram from camera"
-//                                << std::endl;
-//                  }
-//                  exit(0);
-//                }
+    split(complexImg, planes);
+    normalize(planes[0], imgOutput, 0, 1, CV_MINMAX);
 
-//            }
+    // do the same with the filter image
 
-            // ***
+    split(filter, planes);
+    normalize(planes[0], filterOutput, 0, 1, CV_MINMAX);
 
-              // convert input to grayscale
+    // display image in window
+//    namedWindow(originalName, WINDOW_NORMAL);
+//    imshow(originalName, imgGray);
+//    namedWindow(spectrumMagName, WINDOW_NORMAL);
+//    imshow(spectrumMagName, mag);
+//    namedWindow(lowPassName, WINDOW_NORMAL);
+//    imshow(lowPassName, imgOutput);
+//    namedWindow(filterName, WINDOW_NORMAL);
+//    imshow(filterName, filterOutput);
+//    waitKey(0);
 
-              //cvtColor(img, imgGray, CV_BGR2GRAY);
-              imgGray = img.clone();
-              // setup the DFT images
-
-              copyMakeBorder(imgGray, padded, 0, M - imgGray.rows, 0,
-                    N - imgGray.cols, BORDER_CONSTANT, Scalar::all(0));
-              planes[0] = Mat_<float>(padded);
-              planes[1] = Mat::zeros(padded.size(), CV_32F);
-
-              merge(planes, 2, complexImg);
-
-              // do the DFT
-
-              dft(complexImg, complexImg);
-
-              // construct the filter (same size as complex image)
-
-              filter = complexImg.clone();
-              create_butterworth_lowpass_filter(filter, radius, order);
-
-              // apply filter
-              shiftDFT(complexImg);
-              mulSpectrums(complexImg, filter, complexImg, 0);
-              shiftDFT(complexImg);
-
-              // create magnitude spectrum for display
-
-              mag = create_spectrum_magnitude_display(complexImg, true);
-
-              // do inverse DFT on filtered image
-
-              idft(complexImg, complexImg);
-
-              // split into planes and extract plane 0 as output image
-
-              split(complexImg, planes);
-              normalize(planes[0], imgOutput, 0, 1, CV_MINMAX);
-
-              // do the same with the filter image
-
-              split(filter, planes);
-              normalize(planes[0], filterOutput, 0, 1, CV_MINMAX);
-
-            // ***
-
-            // display image in window
-            namedWindow(originalName, WINDOW_NORMAL);
-            imshow(originalName, imgGray);
-            namedWindow(spectrumMagName, WINDOW_NORMAL);
-            imshow(spectrumMagName, mag);
-            namedWindow(lowPassName, WINDOW_NORMAL);
-            imshow(lowPassName, imgOutput);
-            namedWindow(filterName, WINDOW_NORMAL);
-            imshow(filterName, filterOutput);
-            waitKey(0);
-            // start event processing loop (very important,in fact essential for GUI)
-            // 40 ms roughly equates to 1000ms/25fps = 4ms per frame
-
-//            key = waitKey(EVENT_LOOP_DELAY);
-
-//            if (key == 'x'){
-
-//              // if user presses "x" then exit
-
-//                  std::cout << "Keyboard exit requested : exiting now - bye!"
-//                            << std::endl;
-//                  keepProcessing = false;
-//            }
-//        }
-
-        // the camera will be deinitialized automatically in VideoCapture destructor
-
-        // all OK : main returns 0
-
-//        return 0;
-//      }
-
-//      // not OK : main returns -1
-
-//      return -1;
-
+    imageVersions.push_back(imgOutput);
+    imgCounter++;
+    ostringstream oss;
+    oss << "Image " << imgCounter << " . Image restoration by butterworth filtering: " << whichImage;
+    string description = oss.str();
+    imageDescription.push_back(lowPassName);
+    cout << description << endl;
 
 }
 
@@ -851,23 +615,6 @@ void VisionMethods::showSpecificImages(int img1, int img2, int img3, int img4)
     cv::imshow(imageDescription[img4], imageVersions[img4]);
 
     cv::waitKey();
-}
-
-void VisionMethods::mergeAndSave2(int img1, int img2)
-{
-
-//    int totalRows = imageVersions[img1].rows + imageVersions[img2].rows;
-//    int totalCols = imageVersions[img2].cols + imageVersions[img2].cols;
-
-//    cv::Mat img(totalRows, totalCols, CV_8UC1, cv::scalar(0));
-
-//    //Lets "paint" the first image on the left half of img
-
-//    for(int x = 0; x < imageVersions[img2].rows; x++) //Looping through the mask
-//        for(int y = 0; y < imageVersions[img1].cols; y++)
-//        {
-
-//        }
 }
 
 void VisionMethods::writeImages()
