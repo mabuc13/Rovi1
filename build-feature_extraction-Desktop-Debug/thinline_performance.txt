@@ -1,0 +1,152 @@
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_01.png
+Tracking marker in picture: marker_thinline/marker_thinline_01.png
+The methods execution time was: 21814 miliseconds.
+(x, y) coordinates of marker: (744.694, 253.043)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_02.png
+Tracking marker in picture: marker_thinline/marker_thinline_02.png
+The methods execution time was: 20501 miliseconds.
+(x, y) coordinates of marker: (809.093, 227.7)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_03.png
+Tracking marker in picture: marker_thinline/marker_thinline_03.png
+The methods execution time was: 21096 miliseconds.
+(x, y) coordinates of marker: (759.739, 246.744)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_04.png
+Tracking marker in picture: marker_thinline/marker_thinline_04.png
+The methods execution time was: 29249 miliseconds.
+(x, y) coordinates of marker: (748.24, 331.353)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_05.png
+Tracking marker in picture: marker_thinline/marker_thinline_05.png
+The methods execution time was: 29210 miliseconds.
+(x, y) coordinates of marker: (768.897, 351.886)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_06.png
+Tracking marker in picture: marker_thinline/marker_thinline_06.png
+The methods execution time was: 28091 miliseconds.
+(x, y) coordinates of marker: (523.839, 547.323)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_07.png
+Tracking marker in picture: marker_thinline/marker_thinline_07.png
+The methods execution time was: 20253 miliseconds.
+(x, y) coordinates of marker: (615.2, 172.545)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_08.png
+Tracking marker in picture: marker_thinline/marker_thinline_08.png
+The methods execution time was: 20696 miliseconds.
+(x, y) coordinates of marker: (631.758, 255.728)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_09.png
+Tracking marker in picture: marker_thinline/marker_thinline_09.png
+The methods execution time was: 20960 miliseconds.
+(x, y) coordinates of marker: (579.934, 346.414)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_10.png
+Tracking marker in picture: marker_thinline/marker_thinline_10.png
+The methods execution time was: 26484 miliseconds.
+(x, y) coordinates of marker: (646.604, 336.82)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_11.png
+Tracking marker in picture: marker_thinline/marker_thinline_11.png
+The methods execution time was: 25763 miliseconds.
+(x, y) coordinates of marker: (649.27, 469.376)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_12.png
+Tracking marker in picture: marker_thinline/marker_thinline_12.png
+The methods execution time was: 19339 miliseconds.
+(x, y) coordinates of marker: (384.714, 206.092)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_13.png
+Tracking marker in picture: marker_thinline/marker_thinline_13.png
+The methods execution time was: 22148 miliseconds.
+(x, y) coordinates of marker: (553.639, 285.876)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_14.png
+Tracking marker in picture: marker_thinline/marker_thinline_14.png
+The methods execution time was: 21236 miliseconds.
+(x, y) coordinates of marker: (484.216, 312.699)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_15.png
+Tracking marker in picture: marker_thinline/marker_thinline_15.png
+The methods execution time was: 24544 miliseconds.
+(x, y) coordinates of marker: (532.982, 420.795)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_16.png
+Tracking marker in picture: marker_thinline/marker_thinline_16.png
+The methods execution time was: 24989 miliseconds.
+(x, y) coordinates of marker: (486.895, 441.951)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_17.png
+Tracking marker in picture: marker_thinline/marker_thinline_17.png
+The methods execution time was: 20132 miliseconds.
+(x, y) coordinates of marker: (427.535, 194.444)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_18.png
+Tracking marker in picture: marker_thinline/marker_thinline_18.png
+The methods execution time was: 20743 miliseconds.
+(x, y) coordinates of marker: (377.675, 282.076)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_19.png
+Tracking marker in picture: marker_thinline/marker_thinline_19.png
+The methods execution time was: 21556 miliseconds.
+(x, y) coordinates of marker: (288.731, 340.718)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_20.png
+Tracking marker in picture: marker_thinline/marker_thinline_20.png
+The methods execution time was: 29230 miliseconds.
+(x, y) coordinates of marker: (356.489, 301.472)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_21.png
+Tracking marker in picture: marker_thinline/marker_thinline_21.png
+The methods execution time was: 24547 miliseconds.
+(x, y) coordinates of marker: (389.191, 373.881)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_22.png
+Tracking marker in picture: marker_thinline/marker_thinline_22.png
+The methods execution time was: 20355 miliseconds.
+(x, y) coordinates of marker: (548.581, 128.43)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_23.png
+Tracking marker in picture: marker_thinline/marker_thinline_23.png
+The methods execution time was: 24639 miliseconds.
+(x, y) coordinates of marker: (363.454, 265.875)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_24.png
+Tracking marker in picture: marker_thinline/marker_thinline_24.png
+The methods execution time was: 30309 miliseconds.
+(x, y) coordinates of marker: (311.455, 254.53)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_25.png
+Tracking marker in picture: marker_thinline/marker_thinline_25.png
+The methods execution time was: 26365 miliseconds.
+(x, y) coordinates of marker: (355.769, 398.831)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_26.png
+Tracking marker in picture: marker_thinline/marker_thinline_26.png
+The methods execution time was: 22482 miliseconds.
+(x, y) coordinates of marker: (288.402, 496.27)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_27.png
+Tracking marker in picture: marker_thinline/marker_thinline_27.png
+The methods execution time was: 23378 miliseconds.
+(x, y) coordinates of marker: (761.778, 176.278)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_28.png
+Tracking marker in picture: marker_thinline/marker_thinline_28.png
+The methods execution time was: 18790 miliseconds.
+(x, y) coordinates of marker: (754.949, 251.986)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_29.png
+Tracking marker in picture: marker_thinline/marker_thinline_29.png
+The methods execution time was: 23466 miliseconds.
+(x, y) coordinates of marker: (750.906, 376.075)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_thinline/marker_thinline_30.png
+Tracking marker in picture: marker_thinline/marker_thinline_30.png
+The methods execution time was: 28701 miliseconds.
+(x, y) coordinates of marker: (720.057, 402.094)
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ 
+

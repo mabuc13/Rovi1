@@ -1,0 +1,261 @@
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_01.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_01.png
+Center of marker (x, y): (740.25, 294.5)
+The methods execution time was: 36662 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_02.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_02.png
+Center of marker (x, y): (781.3, 284.3)
+The methods execution time was: 34573 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_03.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_03.png
+Center of marker (x, y): (736.3, 314.9)
+The methods execution time was: 33987 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_04.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_04.png
+Center of marker (x, y): (700.5, 360.5)
+The methods execution time was: 36844 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_05.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_05.png
+Center of marker (x, y): (717.5, 359)
+The methods execution time was: 36200 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_06.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_06.png
+Center of marker (x, y): (771.3, 391.5)
+The methods execution time was: 38326 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_07.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_07.png
+Center of marker (x, y): (677, 457)
+The methods execution time was: 39269 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_08.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_08.png
+Center of marker (x, y): (724.75, 434.5)
+The methods execution time was: 37933 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_09.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_09.png
+Center of marker (x, y): (698.167, 438.5)
+The methods execution time was: 35981 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_10.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_10.png
+Center of marker (x, y): (798.75, 371.75)
+The methods execution time was: 34517 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_11.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_11.png
+Center of marker (x, y): (785.1, 362.1)
+The methods execution time was: 36628 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_12.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_12.png
+Center of marker (x, y): (750.75, 383)
+The methods execution time was: 36293 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_13.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_13.png
+Center of marker (x, y): (740.7, 410.5)
+The methods execution time was: 35052 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_14.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_14.png
+Center of marker (x, y): (711.5, 396.3)
+The methods execution time was: 37656 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_15.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_15.png
+Center of marker (x, y): (717.7, 401.1)
+The methods execution time was: 33012 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_16.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_16.png
+Center of marker (x, y): (707.3, 422.7)
+The methods execution time was: 34822 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_17.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_17.png
+Center of marker (x, y): (757.7, 349.3)
+The methods execution time was: 39266 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_18.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_18.png
+Center of marker (x, y): (727.667, 407)
+The methods execution time was: 44563 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_19.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_19.png
+Center of marker (x, y): (745.833, 352.833)
+The methods execution time was: 31292 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_20.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_20.png
+Center of marker (x, y): (700.9, 414.7)
+The methods execution time was: 32199 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_21.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_21.png
+Center of marker (x, y): (685.167, 409.333)
+The methods execution time was: 36224 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_22.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_22.png
+Center of marker (x, y): (607.3, 454.7)
+The methods execution time was: 35129 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_23.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_23.png
+Center of marker (x, y): (560.75, 534.25)
+The methods execution time was: 34007 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_24.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_24.png
+Center of marker (x, y): (540.5, 518)
+The methods execution time was: 34933 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_25.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_25.png
+Center of marker (x, y): (614.1, 457.3)
+The methods execution time was: 38320 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_26.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_26.png
+Center of marker (x, y): (593.5, 461.25)
+The methods execution time was: 34786 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_27.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_27.png
+Center of marker (x, y): (618.75, 433)
+The methods execution time was: 37316 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_28.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_28.png
+Center of marker (x, y): (562.5, 397.75)
+The methods execution time was: 38533 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_29.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_29.png
+Center of marker (x, y): (602.7, 400.5)
+The methods execution time was: 38807 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_30.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_30.png
+Center of marker (x, y): (566.1, 425.5)
+The methods execution time was: 43224 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_31.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_31.png
+Center of marker (x, y): (571.3, 422.7)
+The methods execution time was: 38812 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_32.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_32.png
+Center of marker (x, y): (456.167, 492.833)
+The methods execution time was: 37700 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_33.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_33.png
+Center of marker (x, y): (634.5, 397.833)
+The methods execution time was: 53699 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_34.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_34.png
+Center of marker (x, y): (502.5, 447.5)
+The methods execution time was: 30668 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_35.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_35.png
+Center of marker (x, y): (498.5, 460.5)
+The methods execution time was: 33906 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_36.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_36.png
+Center of marker (x, y): (464.5, 406.5)
+The methods execution time was: 41716 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_37.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_37.png
+Center of marker (x, y): (720.5, 354)
+The methods execution time was: 42412 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_38.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_38.png
+Center of marker (x, y): (400.5, 366.5)
+The methods execution time was: 39326 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_39.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_39.png
+Center of marker (x, y): (656.5, 292)
+The methods execution time was: 36600 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_40.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_40.png
+Center of marker (x, y): (373.833, 251.833)
+The methods execution time was: 45966 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_41.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_41.png
+Center of marker (x, y): (354.5, 246.75)
+The methods execution time was: 52764 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_42.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_42.png
+Center of marker (x, y): (479.7, 237.3)
+The methods execution time was: 38459 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_43.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_43.png
+Center of marker (x, y): (489.3, 237.3)
+The methods execution time was: 36860 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_44.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_44.png
+Center of marker (x, y): (410.75, 226.5)
+The methods execution time was: 47991 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_45.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_45.png
+Center of marker (x, y): (410.25, 245.75)
+The methods execution time was: 43408 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_46.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_46.png
+Center of marker (x, y): (445.5, 348.5)
+The methods execution time was: 52765 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_47.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_47.png
+Center of marker (x, y): (443.5, 326.5)
+The methods execution time was: 37451 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_48.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_48.png
+Center of marker (x, y): (426.5, 342.5)
+The methods execution time was: 34473 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_49.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_49.png
+Center of marker (x, y): (363.5, 732.5)
+The methods execution time was: 40549 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_50.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_50.png
+Center of marker (x, y): (408.5, 318.5)
+The methods execution time was: 35662 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_51.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_51.png
+Center of marker (x, y): (380.5, 409.5)
+The methods execution time was: 50391 miliseconds.
+End of progam
+mark@mark-G771JM:~/qtcreator-3.1.0/build-feature_extraction-Desktop-Debug$ ./feature_extraction marker_color_hard/marker_color_hard_52.png 
+Tracking marker in picture: marker_color_hard/marker_color_hard_52.png
+Center of marker (x, y): (320.5, 511.75)
+The methods execution time was: 39507 miliseconds.
+End of progam
+
