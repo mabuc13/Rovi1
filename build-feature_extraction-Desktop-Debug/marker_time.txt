@@ -28,3 +28,5 @@ The methods execution time was: 29895 miliseconds.
 The methods execution time was: 32762 miliseconds.
 The methods execution time was: 27276 miliseconds.
 The methods execution time was: 36170 miliseconds.
+
+mu_hat = 973067
